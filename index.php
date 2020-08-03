@@ -14,9 +14,13 @@
     <title>Natália Cariry | Advocacia e Consultoria</title>
   </head>
   <body>
+    <?php include("functions/functions.php"); ?>
+
+    
     <!-- HEADER -->
     <header class="header">
         <div class="container">
+
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#">
                     <img src="assets/img/logo.png" alt="logo natalia cariry" class="img-fluid">
@@ -27,17 +31,17 @@
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item <?php if($_GET["url"] == "" || $_GET["url"] == "home") echo "active"; ?>">
                             <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item <?php if($_GET["url"] == "sobre") echo "active"; ?>">
                             <a class="nav-link" href="sobre">Sobre</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item <?php if($_GET["url"] == "areas-de-atuacao") echo "active"; ?>">
                             <a class="nav-link" href="areas-de-atuacao">Áreas de atuação</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
+                        <li class="nav-item <?php if($_GET["url"] == "contato") echo "active"; ?>">
+                            <a class="nav-link" href="contato">Contato</a>
                         </li>
                     </ul>
                 </div>

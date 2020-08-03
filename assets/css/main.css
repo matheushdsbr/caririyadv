@@ -93,8 +93,15 @@ header.header .banner {
     background-size: cover;
     box-shadow: var(--box-shadow);
     display: flex;
-    height: 46vh;
     position: relative;
+}
+
+header.header .home {
+    height: 46vh;
+}
+
+header.header .pages {
+    height: 20vh;
 }
 
 header.header .banner .overflow {
@@ -107,6 +114,7 @@ header.header .banner .overflow {
 }
 
 header.header .banner .banner__text {
+    padding-top: 22px;
     z-index: 1;
 }
 
@@ -204,6 +212,62 @@ header.header .banner .banner__text h2 {
         font-weight: 600;
     }
 }
+
+
+/* ***************************** ABOUT */
+.about .curriculum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* PC - MEDIAQUERY */
+@media(min-width: 769px) {
+    .about .curriculum {
+        flex-direction: row;
+    }
+}
+
+.about .curriculum img {
+    max-width: 30%;
+    box-shadow: var(--box-shadow);
+}
+
+.about .curriculum__body {
+    flex: 1;
+    padding-top: 14px;
+}
+
+/* PC - MEDIAQUERY */
+@media(min-width: 769px) {
+    .about .curriculum__body {
+        margin-left: 20px;
+    }
+}
+
+.about .curriculum .curriculum__body p {
+    text-indent: 2em;
+}
+
+.about .curriculum .curriculum__body p span {
+    font-family: var(--prataFont);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.about .curriculum .curriculum__body ul li a {
+    color: var(--primaryColor);
+    font-weight: bold;
+}
+
+/* PC - MEDIAQUERY */
+@media(min-width: 769px) {
+    .about .curriculum .curriculum__body ul li a:hover {
+        color: var(--lightColor);
+    }
+}
+
+
 
 
 /* 
